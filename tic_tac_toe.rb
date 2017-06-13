@@ -11,6 +11,8 @@ class Game
   #after each prompt response, the number picked on game_board is replaced with an X or O
   def turn
     puts game_board
+  end
+
 end
 
 class Player
