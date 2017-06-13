@@ -64,7 +64,7 @@ class TicTacToe
       exit
     elsif @turn_count == 9
       show_board
-      puts "All tiles have been filled, but there is not a clear winner. The game ends in a draw."
+      puts "The game ends in a draw."
       exit
     end
   end
