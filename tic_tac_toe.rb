@@ -12,7 +12,7 @@ class TicTacToe
     puts "Tic-Tac-Toe"
     player_1 = Player.new("player_1", "X")
     player_2 = Player.new("player_2", "O")
-    while @turn_count < 9
+    loop do
       player_turn(player_1)
       player_turn(player_2)
     end
