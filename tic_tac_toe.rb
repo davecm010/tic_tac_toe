@@ -49,6 +49,9 @@ class TicTacToe
     elsif @user_input.to_i < 1
       puts "The value given is either too small or not a number, try again:"
       get_input
+    elsif @used_values.include? @user_input
+      puts "The value given is already in use, try again:"
+      get_input
     else
       @used_values << @user_input
     end
@@ -61,7 +64,7 @@ class TicTacToe
       exit
     elsif @turn_count == 9
       show_board
-      puts "All tiles have been filled, the game ends in a draw."
+      puts "All tiles have been filled, but there is not a clear winner. The game ends in a draw."
       exit
     end
   end
@@ -74,9 +77,6 @@ class TicTacToe
     end
     false
   end
-
-
-
 end
 
 class Player
